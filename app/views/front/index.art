@@ -1,0 +1,7 @@
+{{ extend './layout/layout.art' }}
+{{ block 'content' }}
+<div class="container-bar">
+    <h1>index</h1>
+    <!-- <p>{{ a }}</p> -->
+</div>
+{{ /block }}

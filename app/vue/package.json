@@ -1,0 +1,86 @@
+{
+  "name": "vue",
+  "version": "0.1.0",
+  "private": true,
+  "description": "vue-cli-service test:unit",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "build-dev": "vue-cli-service build --mode development",
+    "start": "vue-cli-service serve",
+    "test": "jest"
+  },
+  "dependencies": {
+    "element-ui": "^2.5.4",
+    "vue": "^2.5.22"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-plugin-eslint": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "axios": "^0.18.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.1.0",
+    "babel-plugin-component": "^1.1.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^2.1.0",
+    "element-theme-chalk": "^2.5.4",
+    "es6-promise": "^4.2.6",
+    "eslint": "^5.8.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-html": "^5.0.3",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "jest": "^24.1.0",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "node-sass": "^4.11.0",
+    "nprogress": "^0.2.0",
+    "quill": "^1.3.6",
+    "quill-image-drop-module": "^1.0.3",
+    "quill-image-resize-module": "^3.0.0",
+    "sortablejs": "^1.8.3",
+    "vue-axios": "^2.1.4",
+    "vue-cli-plugin-element": "^1.0.1",
+    "vue-cookie": "^1.1.4",
+    "vue-cropper": "^0.4.8",
+    "vue-loader": "^15.6.3",
+    "vue-quill-editor": "^3.0.6",
+    "vue-router": "^3.0.2",
+    "vue-template-compiler": "^2.5.21",
+    "vuex": "^3.1.0",
+    "webpack": "^4.6.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "license": "ISC"
+}

@@ -1,0 +1,42 @@
+.cropperUploadHead {
+  height: 360px; overflow: hidden;
+  .el-icon-upload { margin-top: 150px; }
+  .cropper-container { width: 360px; height: 360px; }
+  .previews {
+    overflow: hidden; margin-bottom: 25px;
+    h4 { text-align: left; margin: 0 0 30px; }
+    .show-preview {
+      float: left; margin: 0 25px;
+      &.medium {
+        width: 120px; height: 140px; margin-left: 0;
+        i { width: 120px; height: 120px; line-height: 120px; font-size: 64px; }
+      }
+      &.small {
+        width: 65px; height: 80px; margin-top: 35px;
+        i { width: 65px; height: 65px; line-height: 65px; font-size: 28px; }
+      }
+      i {  background: #f8f8f8; color: #ccc; }
+      img { width: 100%; }
+      i, img { display: inline-block; margin-bottom: 5px; } /* border-radius: 50%; */
+      p { margin: 0; font-size: 12px; text-align: center; }
+    }
+  }
+  .notices {
+    dl {
+      text-align: left; line-height: 20px; margin-bottom: 10px;
+      dt { font-size: 14px; margin-bottom: 5px; margin: 0; padding: 0; }
+      dd {
+        position: relative; font-size: 12px; color: #aaa; margin: 0; padding: 0;
+        text-indent: 10px;
+        &:before {
+          position: absolute; left: 0; top: 8px; display: inline-block; content: '';
+          width: 3px; height: 3px; border-radius: 50%; background: #ddd;
+        }
+      }
+    }
+  }
+  .cropper-view-box {
+    outline: none !important; // border-radius: 50%;
+  }
+}
+

@@ -1,0 +1,92 @@
+@import url('~@/assets/styles/color.less');
+
+@keyframes fade-in-out {
+  0% { opacity:0} 50% { opacity:1} 100% { opacity:0}
+}
+
+.el-header{
+	border-bottom:1px solid @border-color-gray-frost;font-size:16px;
+	padding:0 5px;background:#fff;color:@gray-9;
+	h1{
+		height:60px;line-height:60px;font-size:22px;
+		padding-left:5px;margin:0;font-weight:100;
+	}
+	a{
+		color:@gray-9;
+		&:hover{ color:@black;}
+		&:active{ color:@color-main-prime;}
+	}
+}
+
+.header-userInfo{
+  -js-display:flex;display:flex;font-size:14px;margin:15px 0;
+
+  .item{
+    flex-grow:1;text-align:center;
+    &.item-name{ flex-grow:6;text-align:right;}
+    .el-badge__content{
+      top:5px;right:50%;margin-right:-10px;
+      animation: 'fade-in-out' 1s infinite;
+    }
+  }
+	a, span{ display:inline-block;height:30px;line-height:30px;padding:0 10px;}
+}
+
+
+.aside-menu-button{
+  position:relative;border:0;background-color:transparent;
+  font-size:18px;margin:10px 0;padding-left:15px;padding-right:15px;
+  &:hover, &.isAsideActive{
+    .cv-menu{
+      i{
+        width:12px;
+        &, &:before, &:after{
+          background:@color-main-prime;
+        }
+      }
+    }
+  }
+}
+
+.el-aside{
+  position:fixed;left:0;top:0;z-index: 99; height:100%;background:darken(@black, 5%);color:@gray-9;
+  width:200px;transition:width ease .3s;
+	.el-menu-aside{
+    border:0;
+    &:not(.el-menu--collapse) { width: 200px;}
+    .el-menu-item{ text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+    // .el-menu-item [class^=el-icon-] { font-size: 16px; }
+    .el-menu-item, .el-submenu{
+      background-color:darken(@black, 5%);
+      .el-menu-item-group__title{
+        margin-left:-15px;
+        color:darken(@gray-9, 20%);background:darken(@black, 5%);
+      }
+      &, .el-submenu__title{
+        color:@gray-9;
+        &:hover, &:focus{ background: darken(@black, 8%) !important;}
+      }
+      &.is-active{
+        color:@color-main-prime;
+        background:darken(@black, 12%);
+      }
+    }
+    .el-submenu{
+      .el-menu{
+        .el-menu-item{
+          font-size:12px;text-indent:8px;
+          height:45px;line-height:45px;
+        }
+      }
+    }
+    &.v-leave-active{
+      .el-menu-item{ text-overflow:initial;}
+    }
+  }
+	.header-logo{
+		height:60px;line-height:60px;text-align:center;
+    font-size:22px;font-weight:100;background:darken(@black, 12%);
+	}
+	a{ color:@gray-9; }
+}
+

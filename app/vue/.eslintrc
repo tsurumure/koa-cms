@@ -1,0 +1,22 @@
+{
+    "extends": "standard", "plugins": [ "html" ], "parser": "babel-eslint",
+    "rules": {
+      "no-alert": 0, "no-new":0, "no-new-wrappers":0, "no-unused-vars":0, "eqeqeq":0,
+      "no-multiple-empty-lines": 0, "object-property-newline": 0, "no-undef": 0, "no-useless-escape": 0,
+      "handle-callback-err": 0, "one-var": 0, "standard/object-curly-even-spacing": 0, "space-unary-ops": 0,
+      "no-trailing-spaces": 0, "no-unused-expressions": 0, "operator-linebreak": 0,
+
+      "camelcase": 0, "no-tabs": 0, "comma-spacing": 0,
+      "space-before-function-paren": [0, "always"],
+      "padded-blocks": 0, "indent": 0, "no-mixed-operators": 0,
+
+      "no-cond-assign": 0, "object-curly-spacing": 0, "space-before-blocks": 0
+    },
+    "parserOptions": {
+      "ecmaVersion": 6
+    },
+    "env": {
+        "browser": true,
+        "es6": true
+    }
+  }

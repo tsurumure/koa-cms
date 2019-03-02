@@ -1,0 +1,31 @@
+{{ extend './layout/layout.art' }}
+{{ block 'content' }}
+<div class="container-bar">
+    <h2>talk</h2>
+    <ul>
+        <li></li>
+    </ul>
+    <p><input type="text" id="input" placeholder="Input ..."></p>
+    <p><button id="send">send</button></p>
+    <script src="/js/lib/socket.io.js"></script>
+    <script>
+        window.onload = function () {
+            // var socket = io('http://localhost:3001') // .connect('http://localhost:3001');
+            var socket = io.connect('http://localhost:3001')
+            socket.on('user conncet', data => {
+                console.log(data)
+            })
+            socket.on('getMsg', message => {
+                message.created = Date.now()
+                console.log('服务端消息：',  message)
+            })
+            var send = document.querySelector('#send')
+            var input = document.querySelector('#input')
+            send.onclick = function () {
+                console.log(input.value)
+                socket.emit('send', input.value)
+            }
+        }
+    </script>
+</div>
+{{ /block }}

@@ -1,0 +1,25 @@
+<template>
+   <div></div>
+</template>
+<script>
+export default {
+   components: {},
+   computed: {},
+   methods: {},
+   data() {
+       return {}
+   },
+   watch: {},
+   mounted() {},
+   created() {},
+   beforeCreate() {},
+   beforeMount() {},
+   beforeUpdate() {},
+   updated() {},
+   beforeDestroy() {},
+   destroyed() {},
+   activated() {}
+}
+</script>
+<style lang='less' scoped>
+</style>
