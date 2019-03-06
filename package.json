@@ -4,11 +4,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "nodemon": "nodemon app.js",
+    "start": "./node_modules/.bin/nodemon bin/www"
   },
   "dependencies": {
     "art-template": "^4.13.2",
-    "blueimp-md5": "^2.10.0",
     "boom": "^7.3.0",
     "http-proxy": "^1.17.0",
     "jsonwebtoken": "^8.4.0",

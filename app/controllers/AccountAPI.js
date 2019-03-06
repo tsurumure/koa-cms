@@ -14,7 +14,7 @@ class AccountAPI {
         // koa-validate 表单验证
         // https://github.com/RocksonZeta/koa-validate
         const username = ctx.checkBody('username').notEmpty().value // .toInt()
-        const password = ctx.checkBody('password').notEmpty().value
+        const password = ctx.checkBody('password').notEmpty().md5().value
         const captcha = ctx.checkBody('captcha').notEmpty().value
 
         // [Validate] Form

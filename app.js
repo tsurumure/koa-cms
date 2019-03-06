@@ -11,21 +11,21 @@ require('koa-validate')(app)
 
 
 // socket.io
-const server = require('http').createServer(app.callback())
-const io = require('socket.io')(server)
-io.on('connection', (socket) => {
+// const server = require('http').createServer(app.callback())
+// const io = require('socket.io')(server)
+// io.on('connection', (socket) => {
 
-    let user = '游客' + socket.id.substring(0, 6)
-    io.local.emit('user conncet', user + '进入聊天室')
+//     let user = '游客' + socket.id.substring(0, 6)
+//     io.local.emit('user conncet', user + '进入聊天室')
 
-    socket.on('send', data => {
-        console.log('客户端发送的内容：', data)
-        socket.emit('getMsg', data)
-        socket.broadcast.emit('getMsg', data)
-    })
+//     socket.on('send', data => {
+//         console.log('客户端发送的内容：', data)
+//         socket.emit('getMsg', data)
+//         socket.broadcast.emit('getMsg', data)
+//     })
 
-})
-server.listen(3001)
+// })
+// server.listen(3001)
 
 
 
@@ -117,8 +117,8 @@ render(app, {
 
 
 
-
-app.listen(3000)
+module.exports = app
+// app.listen(3000)
 
 
 // 反向代理
